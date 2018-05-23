@@ -448,11 +448,12 @@ def connect(dsn=None,
     try:
         params = dsn.split(":")
         dbhost = params[0]
-        dbbase = params[1]
-        dbuser = params[2]
-        dbpasswd = params[3]
-        dbopt = params[4]
-        dbtty = params[5]
+        dbport = int(params[1])
+        dbbase = params[2]
+        dbuser = params[3]
+        dbpasswd = params[4]
+        dbopt = params[5]
+        dbtty = params[6]
     except (AttributeError, IndexError, TypeError):
         pass
 
